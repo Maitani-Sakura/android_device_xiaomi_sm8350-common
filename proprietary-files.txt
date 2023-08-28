@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from haydn V13.0.4.0.SKKMIXM
+# All unpinned blobs below are extracted from haydn V14.0.3.0.TKKMIXM
 
 # ADSP
 vendor/bin/adsprpcd
@@ -26,9 +26,8 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Bluetooth (A2DP)
-vendor/lib/hw/audio.bluetooth_qti.default.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib/btaudio_offload_if.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
 
@@ -122,36 +121,37 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 # Consumer IR
 vendor/lib64/hw/consumerir.lahaina.so
 
-# Display
-vendor/bin/qdcmss
-vendor/etc/display/DPU660.xml
-vendor/etc/display/DPU670.xml
-vendor/etc/display/DPU720.xml
-vendor/etc/display/DPU7__.xml
-vendor/etc/display/advanced_sf_offsets.xml
-vendor/etc/init/qdcmss.rc
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libdpps.so
-vendor/lib64/libhdr_tm.so
-vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libqrtrclient.so
-vendor/lib64/libqseed3.so
-vendor/lib64/librcmask.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libsnapdragoncolor-manager.so
-vendor/lib64/libsnapdragoncolor-qdcm.so
-vendor/lib64/libtinyxml2_1.so
+# Display - from XQ-BC72 61.2.A.0.410
+vendor/etc/display/DPU660.xml|b26dd73e361546d89bf3d7082a471703dc6ac2cb
+vendor/etc/display/DPU670.xml|e5131a60ceff29ca5eb561eec7eddadef1d0486f
+vendor/etc/display/DPU720.xml|4e54e8712d65773eb87867bf64a4cb98ea9bb8c3
+vendor/etc/display/DPU7__.xml|c056f3cb9fa123ca3de5b2a9775c184dddf25b9d
+vendor/lib64/libdisplayqos.so|aa222f4c1a2d2fb60944c44f8a82621d6bc75184
+vendor/lib64/libdisplayskuutils.so|37e4d543c696a5c9f0c1b44fd7299a0bc7dba5e8
+vendor/lib64/libdpps.so|9caf32a0d3636af579ea6e1a6c5638a16ed19444
+vendor/lib64/libqrtrclient.so|2474a708487c269c04afffbf755fff1686c6011c
+vendor/lib64/libqseed3.so|d62c37baf259250cadfcff8734e82054ed87bb96
+vendor/lib64/librcmask.so|8feb479fe590b6aec282ce3342574d9113f80516
+vendor/lib64/libsdm-color.so|a83576915a146492d430711e273b9af9a95d4fed
+vendor/lib64/libsdm-colormgr-algo.so|5416a3b9b0735099c9b86f451f41386711787ea4
+vendor/lib64/libsdm-diag.so|393c9ad3e3ad3210515900627f65bf6e3633226e
+vendor/lib64/libsdm-disp-vndapis.so|dc3ff8c971bbcb0d1b9e5079324d1d1d05a1fd39
+vendor/lib64/libsdmextension.so|4c32026ff8cb1270081881d4def7a2ad05ad0b80
+vendor/lib64/libtinyxml2_1.so|11ceb3f1e7650c41621d47e5ec5567c8f466086e
+
+# Display HDR - from tundra S3SJS32.1-86-1-4
+vendor/lib64/libhdr_tm.so|7954c5cd5c0b23fe8d0609361c22d24c59f1448b
 
 # Display postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/ppd
+vendor/bin/qdcmss
+vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/lib64/libdisp-aba.so
+vendor/lib64/libqdcm-mode-parser.so
+vendor/lib64/libsnapdragoncolor-manager.so
+vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/vendor.display.color@1.0.so
 vendor/lib64/vendor.display.color@1.1.so
 vendor/lib64/vendor.display.color@1.2.so
@@ -182,8 +182,8 @@ vendor/lib64/libdpmqmihal.so
 
 # DRM
 vendor/bin/qseecomd
-vendor/etc/init/qseecomd.rc
 vendor/etc/gpfspath_oem_config.xml
+vendor/etc/init/qseecomd.rc
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libQSEEComAPI.so
@@ -206,8 +206,8 @@ vendor/lib64/libtrustedapploader.so
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
+vendor/lib64/mediadrm/libwvdrmengine.so
 
 # DSP service
 vendor/bin/dspservice
@@ -308,7 +308,8 @@ system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
-system_ext/priv-app/ims/ims.apk
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+system_ext/priv-app/ims/ims.apk|3c6f0bfeba8ecda785b9dc7b707faf3f5a461058
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdaemon
 vendor/etc/init/ims_rtp_daemon.rc
@@ -389,8 +390,8 @@ vendor/etc/media_shima_v1/video_system_specs.json
 vendor/etc/media_yupik_v1/video_system_specs.json
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
-vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/video_system_specs.json
+vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/lib/libmmosal.so
 vendor/lib/libqc2vppfilter.so
 vendor/lib/libqcodec2_base.so
@@ -555,9 +556,9 @@ system_ext/etc/permissions/qti_permissions.xml
 system_ext/framework/qcrilhook.jar
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/app/IWlanService/IWlanService.apk
-vendor/bin/hw/qcrilNrd
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
+vendor/bin/hw/qcrilNrd
 vendor/bin/netmgrd
 vendor/bin/pd-mapper
 vendor/bin/port-bridge
@@ -577,6 +578,7 @@ vendor/etc/init/qcrilNrd.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
+vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/qcril_database/upgrade/config/10.0_config.sql
 vendor/etc/qcril_database/upgrade/config/6.0_config.sql
 vendor/etc/qcril_database/upgrade/config/7.0_config.sql
@@ -593,7 +595,6 @@ vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.
 vendor/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql
 vendor/etc/qcril_database/upgrade/other/9_version_update_ecc_table.sql
-vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/etc/ssg/ta_config.json
